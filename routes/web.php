@@ -17,3 +17,16 @@ Route::get('/bikin_form', function () {
 Route::get('/welcome', function () {
   return view('welcome');
 });
+
+route::get('/master', function() {
+  return view('template.master');
+});
+
+route::get('/master', function() {
+  return view('template.master');
+});
+
+route::get('/index', function() {
+  return view('index');
+});
+

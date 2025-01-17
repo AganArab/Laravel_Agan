@@ -6,7 +6,7 @@
     <title>Belajar Blade</title>
 </head>
 <body>
-    <h1>MEDIA HTML</h1>
+    <!-- <h1>MEDIA HTML</h1>
     <h3>Sosial media developer</h3>
     <p>Belajar dan berbagi agar hidup lebih baik</p>
     <h4>Benefit join di media online</h4>
@@ -20,6 +20,7 @@
         <li>mengunjungi website ini</li>
         <li>mendaftarkan di <a href="{{ url('/bikin_form') }}">Form Sign Up</a></li>
         <li>Selesai</li>
-    </ol>
+    </ol> -->
+    
 </body>
 </html>

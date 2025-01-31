@@ -4,8 +4,7 @@
 @section('form', 'Movies')
 @section('title', 'What movie do you want to watch?')
 
+@include('template.separate.form')
 
-@section('genres', 'Find your taste in genres here')
-@section('form_genre', 'Genre')
 
 

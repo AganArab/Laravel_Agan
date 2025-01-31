@@ -5,6 +5,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 <head>
+  @stack('css')
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Starter</title>
@@ -17,6 +18,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href={{asset("dist/css/adminlte.min.css")}}>
 </head>
 <body class="hold-transition sidebar-mini">
+ 
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -24,24 +26,52 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  
+  @include ('template.separate.sidebar') 
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+<div class="wrapper">
 
   <!-- Content Wrapper. Contains page content -->
-  @include ('template.separate.content')
-  @include('template.separate.form_genres')
-  
-  
-  <!-- /.content-wrapper -->
+  <div class="content-wrapper">
 
-  <!-- Control Sidebar -->
-  @include ('template.separate.sidebar')
- 
-  <!-- /.control-sidebar -->
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">@yield('content-title')</h1>
+          </div><!-- /.col -->
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+        <!-- /.col -->
+          </div>
+        <!-- /.row -->
+        </div>
+    <!-- /.container-fluid -->
+      </div>
+<!-- /.content-header -->
+    </div>
+<!-- Main content -->
+@yield('content')
+<!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
 
   <!-- Main Footer -->
   @include ('template.separate.footer')
-</div>
-<!-- ./wrapper -->
+  <!-- ./wrapper -->
+
 
 <!-- REQUIRED SCRIPTS -->
 
@@ -51,5 +81,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src={{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}></script>
 <!-- AdminLTE App -->
 <script src={{asset("dist/js/adminlte.min.js")}}></script>
+@stack('js')
 </body>
 </html>

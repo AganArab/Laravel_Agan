@@ -14,7 +14,7 @@ class GenreController extends Controller
     public function index()
     {
         // fetching data dari tabel genres
-        $genres = DB::table('genres')->get();
+        $genres = DB::table(table: 'genres')->get();
         // return ke view dan kirirmkan data $genres
         return view('genre.index', compact('genres'));
         
